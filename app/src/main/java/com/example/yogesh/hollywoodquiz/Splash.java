@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
+import android.view.WindowManager;
 
 /**
  * Created by Yogesh on 12/13/2016.
@@ -16,7 +18,9 @@ public class Splash extends Activity {
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle icicle) {
+        Log.i("Learning", "splash screen");
         super.onCreate(icicle);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_splash);
 
         /* New Handler to start the Menu-Activity
